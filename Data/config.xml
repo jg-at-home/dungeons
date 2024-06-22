@@ -1,0 +1,30 @@
+<data>
+    <races>
+        <race name="Dwarf" classes="Bard, Cleric, Fighter, Thief" minStats="CON 9" mods="CHA -1, CON +1" ability="Infravision"/>
+        <race name="Elf" classes="Cleric, Druid, Fighter, Wizard, Ranger, Thief" minStats="INT 9" mods="CON -1, DEX +1" ability="SecretDoorDetection"/>
+        <race name="Gnome" classes="Cleric, Fighter, Thief, Wizard" minStats="CON 9, INT 9" ability="DefensiveBonus"/>
+        <race name="Halfling" classes="Bard, Druid, Fighter, Thief" minStats="CON 9, DEX 9" mods="DEX +1, STR -1" ability="InitiativeBonus"/>
+        <race name="Human" classes="*"/>
+    </races>
+    <classes>
+        <class name="Bard" hitDice="1d6" primeStat="CHA"/>
+        <class name="Cleric" hitDice="1d6" primeStat="WIS"/>
+        <class name="Druid" hitDice="1d6" primeStat="WIS"/>
+        <class name="Fighter" hitDice="1d8" primeStat="STR"/>
+        <class name="Ranger" hitDice="1d8" primeStat="STR"/>
+        <class name="Thief" hitDice="1d4" primeStat="DEX"/>
+        <class name="Wizard" hitDice="1d4" primeStat="INT"/>
+    </classes>
+    <stats>
+        <stat name="Strength" abbrev="STR"/>
+        <stat name="Intelligence" abbrev="INT"/>
+        <stat name="Wisdom" abbrev="WIS"/>
+        <stat name="Dexterity" abbrev="DEX"/>
+        <stat name="Constitution" abbrev="CON"/>
+        <stat name="Charisma" abbrev="CHA"/>
+        <stat name="HP" abbrev="HP"/>
+    </stats>
+    <CON_mods>
+        -3, -3, -3, -2, -2, -1, -1, -1, 0, 0, 0, 0, 1, 1, 1, 2, 2, 3
+    </CON_mods>
+</data>

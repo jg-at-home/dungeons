@@ -1,0 +1,11 @@
+<character name="Alix" race="Halfling" class="Druid" money="80">
+  <stats>
+    <stat abbrev="HP" value="6" mods="0"/>
+    <stat abbrev="STR" value="9" mods="0"/>
+    <stat abbrev="INT" value="10" mods="0"/>
+    <stat abbrev="WIS" value="12" mods="0"/>
+    <stat abbrev="DEX" value="20" mods="0"/>
+    <stat abbrev="CON" value="17" mods="0"/>
+    <stat abbrev="CHA" value="10" mods="0"/>
+  </stats>
+</character>

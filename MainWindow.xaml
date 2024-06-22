@@ -1,0 +1,53 @@
+﻿<Window x:Class="DragonsAndDungeons.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragonsAndDungeons"
+        mc:Ignorable="d"
+        Title="Dragons and Dungeons" Height="450" Width="800"
+        Initialized="Window_Initialized">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Actions">
+                <MenuItem Header="_New Character" Click="NewCharacterItem_Click"/>
+                <Separator/>
+                <MenuItem Header="E_xit" Click="ExitItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox Name="characterList" SelectionMode="Single" SelectionChanged="characterList_SelectionChanged" Grid.Column="0">
+                <ListBoxItem>Foo</ListBoxItem>
+                <ListBoxItem>Bar</ListBoxItem>
+            </ListBox>
+            <Grid Grid.Column="1" Margin="4, 0, 4, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Race:" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Class:" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Stats:" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Money:" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Name="nameText" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Name="raceText" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Name="classText" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" Name="statsText" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" Name="moneyText" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

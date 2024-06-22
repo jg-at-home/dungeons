@@ -1,0 +1,38 @@
+﻿<Window x:Class="DragonsAndDungeons.NewCharacterDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragonsAndDungeons"
+        mc:Ignorable="d"
+        Title="New Character"
+        WindowStartupLocation="CenterOwner"
+        Initialized="Window_Initialized"
+        Height="200" Width="400" ResizeMode="NoResize">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Height="32">
+            <Button Name="okButton" Content="OK" Margin="64,4,0,4" Width="64" IsDefault="True" Click="okButton_Click"/>
+            <Button Name="cancelButton" Content="Cancel" Margin="128,4,0,4" Width="64" Click="cancelButton_Click"/>
+        </StackPanel>
+        <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Race" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Class" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Name="nameText" VerticalAlignment="Center" TextChanged="nameText_TextChanged"/>
+            <ComboBox Grid.Row="1" Grid.Column="1" Name="raceCombo" VerticalAlignment="Center" SelectionChanged="raceCombo_SelectionChanged"/>
+            <ComboBox Grid.Row="2" Grid.Column="1" Name="classCombo" VerticalAlignment="Center" SelectionChanged="classCombo_SelectionChanged"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Primary Stat" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Name="primaryStatText" VerticalAlignment="Center"/>
+        </Grid>
+    </DockPanel>
+</Window>
